@@ -1,0 +1,10 @@
+<h2>My Posts</h2>
+<div *ngIf="!posts">
+    <button (click)="loadAllPosts()" class="btn-primary">Click to load all posts</button>
+</div>
+<ul class="list-group">
+    <li *ngFor="let post of posts | async" class="list-group-item">
+        <span class="badge">{{post.id}}</span> <label>{{post.title}}</label>
+        <p>{{post.body}}</p>
+    </li>
+</ul>

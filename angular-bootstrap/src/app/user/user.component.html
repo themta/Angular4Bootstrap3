@@ -1,0 +1,7 @@
+<h2>My Users</h2>
+<h3>Render component with loading and displaying users</h3>
+<ul class="list-group">
+    <li *ngFor="let user of users | async" class="list-group-item">
+        <span class="badge">{{user.id}}</span> {{user.name}}
+    </li>
+</ul>
